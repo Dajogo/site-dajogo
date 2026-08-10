@@ -126,32 +126,33 @@ p {	line-height: 2.1; }
             justify-content: center;
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
-    padding: 10px;
-    box-sizing: border-box;
 }
 
 .tm-site-name-h1 { 
 	color: #0264cf;
-	font-weight: 700;
-	margin: 0;
-	font-size: 5.5vw; /* Calibrado para preencher o bloco no mobile */
-	line-height: 1.1;
+	font-size: 3rem; 
 }
 
 .tm-site-name-h2 {
 	color: #6c6c6c;
-	margin: 4px 0 0 0;
-	font-size: 2.2vw; /* Calibrado para o slogan no mobile */
-	line-height: 1.2;
-	text-align: center;
+	font-size: 1.4rem;
 }
 
-/* Restaura o tamanho original grande para telas de computadores */
-@media (min-width: 768px) {
-	.tm-site-name-h1 { font-size: 3rem; }
-	.tm-site-name-h2 { font-size: 1.4rem; }
+.container-fluid { max-width: 1530px; }
+
+.tm-header-gallery {
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    -webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+
+.tm-header-img {
+	padding: 0 1px 1px 0 !important;
+	margin: 0 !important;
 }
 
 
