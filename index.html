@@ -67,15 +67,31 @@ http://site.dajogo.app
                         <!-- LEGADO - Logo e Slogan -->
                         <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 tm-pad-0" style="position: relative;">
     
-                            <!-- VERSÃO COMPUTADOR (Usa d-md-flex nativo do Bootstrap para preservar a altura perfeita do mosaico) -->
+                            <!-- VERSÃO COMPUTADOR -->
                             <div class="d-none d-md-flex" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; flex-direction: column; align-items: center; justify-content: center; z-index: 10;">
-                                <img src="img/dajogo-logo.png" alt="Dajogo" class="img-fluid tm-logo-img">
+                                <!-- Container do Bootstrap para criar a grade interna -->
+                                <div class="container-fluid">
+                                    <!-- Centraliza a coluna horizontalmente (justify-content-center) -->
+                                    <div class="row justify-content-center">
+                                        <!-- col-2 faz a imagem ocupar exatamente as duas colunas centrais (6 e 7) -->
+                                        <div class="col-2 text-center">
+                                            <img src="img/dajogo-logo.png" alt="Dajogo" class="img-fluid tm-logo-img">
+                                        </div>
+                                    </div>
+                                </div>
                                 <h2 class="tm-site-name-h2">Dajogo. Seu jogo, nossa paixão.</h2>
                             </div>
                         
-                            <!-- VERSÃO CELULAR (Usa d-flex e some no PC com d-md-none sem achatar as colunas) -->
+                            <!-- VERSÃO CELULAR -->
                             <div class="d-flex d-md-none" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; flex-direction: column; align-items: center; justify-content: center; padding: 5px; z-index: 10;">
-                                <img src="img/dajogo-logo-mobile.png" alt="Dajogo" class="img-fluid tm-logo-img" style="max-width: 85%; height: auto;">
+                                <div class="container-fluid">
+                                    <div class="row justify-content-center">
+                                        <!-- col-4 no mobile para a logo não encolher ao extremo na tela pequena -->
+                                        <div class="col-4 text-center">
+                                            <img src="img/dajogo-logo-mobile.png" alt="Dajogo" class="img-fluid tm-logo-img" style="height: auto;">
+                                        </div>
+                                    </div>
+                                </div>
                                 <h2 class="tm-site-name-h2" style="font-size: 0.55rem !important; margin: 2px 0 0 0; line-height: 1.1;">Dajogo</h2>
                             </div>
                         
