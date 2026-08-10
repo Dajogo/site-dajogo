@@ -65,20 +65,22 @@ http://site.dajogo.app
                             </a>                        
                         </div>
                         <!-- LEGADO - Logo e Slogan -->
-                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 tm-pad-0" style="position: relative;">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 tm-pad-0">
     
-                            <!-- VERSÃO COMPUTADOR -->
-                            <div class="d-none d-md-flex" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; flex-direction: column; align-items: center; justify-content: center; z-index: 10; padding: 20px;">
-                                <!-- Tiramos o container-fluid. A classe w-50 faz a logo ocupar exatamente a metade do bloco central, perfeitamente no meio -->
-                                <img src="img/dajogo-logo.png" alt="Dajogo" class="img-fluid tm-logo-img w-50" style="height: auto; margin-bottom: 10px;">
-                                <h2 class="tm-site-name-h2" style="margin: 0; text-align: center;">Dajogo. Seu jogo, nossa paixão.</h2>
-                            </div>
+                            <!-- Mantemos rigorosamente a classe original para não quebrar a estrutura do mosaico -->
+                            <div class="tm-site-name">
+                                
+                                <!-- O próprio navegador alterna a logo sozinho de forma nativa e sem JavaScript -->
+                                <picture>
+                                    <!-- Se a tela for menor que 768px (Mobile), carrega a logo menor -->
+                                    <source media="(max-width: 767px)" srcset="img/dajogo-logo-mobile.png">
+                                    <!-- Se for computador ou tablet (Desktop), carrega a logo padrão -->
+                                    <img src="img/dajogo-logo.png" alt="Dajogo" class="img-fluid tm-logo-img" style="max-width: 80%; height: auto; display: block; margin: 0 auto 10px auto;">
+                                </picture>
                         
-                            <!-- VERSÃO CELULAR -->
-                            <div class="d-flex d-md-none" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; flex-direction: column; align-items: center; justify-content: center; padding: 10px; z-index: 10;">
-                                <!-- No mobile usamos w-75 para a logo ficar um pouco maior e legível na tela do telefone -->
-                                <img src="img/dajogo-logo-mobile.png" alt="Dajogo" class="img-fluid tm-logo-img w-75" style="height: auto; margin-bottom: 5px;">
-                                <h2 class="tm-site-name-h2" style="font-size: 0.55rem !important; margin: 0; line-height: 1.1; text-align: center;">Dajogo</h2>
+                                <!-- Slogan único que se adapta de forma limpa -->
+                                <h2 class="tm-site-name-h2" style="margin: 0; text-align: center; width: 100%;">Dajogo. Seu jogo, nossa paixão.</h2>
+                                
                             </div>
                         
                         </div>
