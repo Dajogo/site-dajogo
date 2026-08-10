@@ -68,34 +68,21 @@ http://site.dajogo.app
                         <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 tm-pad-0" style="position: relative;">
     
                             <!-- VERSÃO COMPUTADOR -->
-                            <div class="d-none d-md-flex" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; flex-direction: column; align-items: center; justify-content: center; z-index: 10;">
-                                <!-- Container do Bootstrap para criar a grade interna -->
-                                <div class="container-fluid">
-                                    <!-- Centraliza a coluna horizontalmente (justify-content-center) -->
-                                    <div class="row justify-content-center">
-                                        <!-- col-2 faz a imagem ocupar exatamente as duas colunas centrais (6 e 7) -->
-                                        <div class="col-2 text-center">
-                                            <img src="img/dajogo-logo.png" alt="Dajogo" class="img-fluid tm-logo-img">
-                                        </div>
-                                    </div>
-                                </div>
-                                <h2 class="tm-site-name-h2">Dajogo. Seu jogo, nossa paixão.</h2>
+                            <div class="d-none d-md-flex" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; flex-direction: column; align-items: center; justify-content: center; z-index: 10; padding: 20px;">
+                                <!-- Tiramos o container-fluid. A classe w-50 faz a logo ocupar exatamente a metade do bloco central, perfeitamente no meio -->
+                                <img src="img/dajogo-logo.png" alt="Dajogo" class="img-fluid tm-logo-img w-50" style="height: auto; margin-bottom: 10px;">
+                                <h2 class="tm-site-name-h2" style="margin: 0; text-align: center;">Dajogo. Seu jogo, nossa paixão.</h2>
                             </div>
                         
                             <!-- VERSÃO CELULAR -->
-                            <div class="d-flex d-md-none" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; flex-direction: column; align-items: center; justify-content: center; padding: 5px; z-index: 10;">
-                                <div class="container-fluid">
-                                    <div class="row justify-content-center">
-                                        <!-- col-4 no mobile para a logo não encolher ao extremo na tela pequena -->
-                                        <div class="col-4 text-center">
-                                            <img src="img/dajogo-logo-mobile.png" alt="Dajogo" class="img-fluid tm-logo-img" style="height: auto;">
-                                        </div>
-                                    </div>
-                                </div>
-                                <h2 class="tm-site-name-h2" style="font-size: 0.55rem !important; margin: 2px 0 0 0; line-height: 1.1;">Dajogo</h2>
+                            <div class="d-flex d-md-none" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; flex-direction: column; align-items: center; justify-content: center; padding: 10px; z-index: 10;">
+                                <!-- No mobile usamos w-75 para a logo ficar um pouco maior e legível na tela do telefone -->
+                                <img src="img/dajogo-logo-mobile.png" alt="Dajogo" class="img-fluid tm-logo-img w-75" style="height: auto; margin-bottom: 5px;">
+                                <h2 class="tm-site-name-h2" style="font-size: 0.55rem !important; margin: 0; line-height: 1.1; text-align: center;">Dajogo</h2>
                             </div>
                         
                         </div>
+
 
                             <!-- Fundo da logo - 2:1 - Branco -->
                             <img src="img/logo-bg.jpg" alt="Image" class="img-fluid tm-header-img"> 
