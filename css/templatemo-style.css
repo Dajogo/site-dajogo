@@ -126,33 +126,39 @@ p {	line-height: 2.1; }
             justify-content: center;
     width: 100%;
     height: 100%;
+    
+    /* Força o contêiner a manter rigorosamente a proporção 2:1 */
+    aspect-ratio: 2 / 1;
+    overflow: hidden;
+    padding: 5px; /* Evita que o texto encoste nas bordas das fotos */
 }
 
 .tm-site-name-h1 { 
 	color: #0264cf;
-	font-size: 3rem; 
+	font-weight: 700;
+	margin: 0;
+	/* Usa vw (Viewport Width). A fonte diminui no celular e cresce no PC proporcionalmente */
+	font-size: 4vw; 
+	line-height: 1.1;
 }
 
 .tm-site-name-h2 {
 	color: #6c6c6c;
-	font-size: 1.4rem;
+	margin: 5px 0 0 0;
+	/* Diminui o slogan proporcionalmente à tela */
+	font-size: 1.6vw;
+	line-height: 1.2;
+	text-align: center;
 }
 
-.container-fluid { max-width: 1530px; }
-
-.tm-header-gallery {
-	display: -ms-flexbox;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	    -webkit-flex-wrap: wrap;
-	        flex-wrap: wrap;
-}
-
-.tm-header-img {
-	padding: 0 1px 1px 0 !important;
-	margin: 0 !important;
+/* Regra especial para telas maiores (tablets e computadores) */
+@media (min-width: 768px) {
+	.tm-site-name-h1 { 
+		font-size: 3rem; /* Restaura o tamanho original grande no desktop */
+	}
+	.tm-site-name-h2 {
+		font-size: 1.4rem; /* Restaura o tamanho original do slogan no desktop */
+	}
 }
 
 .navbar { padding: 0; }
