@@ -138,6 +138,10 @@ p {	line-height: 2.1; }
 	font-size: 1.4rem;
 }
 
+.tm-logo-cell {
+	position: relative;
+}
+
 .container-fluid { max-width: 1530px; }
 
 .tm-header-gallery {
