@@ -22,11 +22,7 @@
 .note p { margin:0; }
 .download-card .note { position:relative; z-index:1; }
 .download-card .note p { color:var(--ink); margin:0; }
-.sr-only { height:1px; margin:-1px; overflow:hidden; position:absolute; width:1px; clip:rect(0,0,0,0); }
-.waitlist-form { display:flex; flex-wrap:wrap; gap:10px; max-width:520px; position:relative; z-index:1; }
-.waitlist-form input { border:0; border-radius:999px; flex:1 1 200px; font:1rem 'Barlow',sans-serif; min-width:0; padding:16px 20px; }
-.waitlist-form .button { border:0; cursor:pointer; }
-.waitlist-form small { color:rgba(255,255,255,.72); flex-basis:100%; font-size:.75rem; line-height:1.4; }
+.waitlist-form { position:relative; z-index:1; }
 .courts-page { padding:85px 0 120px; }
 .courts-hero { background:var(--blue); color:var(--ink); padding:clamp(34px,6vw,76px); }
 .courts-hero .eyebrow { color:var(--orange); }
