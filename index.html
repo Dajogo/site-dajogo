@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/landing.css">
   <link rel="stylesheet" href="css/pages.css">
+  <script src="js/waitlist.js" defer></script>
 </head>
 <body>
   <header class="template-header">
@@ -56,8 +57,21 @@
     </section>
     <section class="download section-wrap" id="download">
       <div class="download-card">
-        <div><p class="eyebrow">Lista de espera</p><h2>Quer ser avisado quando o Dajogo estiver disponível?</h2><p>Estamos na fase de testes do MVP e queremos avisar você assim que for possível fazer parte.</p></div>
-        <div class="waitlist-form"><a class="button button-primary" href="https://forms.gle/MxWweCXxNQo7LvG2A" target="_blank" rel="noopener noreferrer">Formulário para lista de espera <span aria-hidden="true">↗</span></a></div>
+        <div class="waitlist-intro"><p class="eyebrow">Lista de espera</p><h2>Quer ser avisado quando o Dajogo estiver disponível?</h2><p>Estamos na fase de testes do MVP e queremos avisar você assim que for possível fazer parte.</p></div>
+        <form class="waitlist-form" id="waitlist-form" action="https://docs.google.com/forms/d/e/1FAIpQLSf3uaZRWssizqfK-Rjr1-WYYCblykHY3pZeDlvD4hATRQ03fA/formResponse" method="post" target="waitlist-submit-frame">
+          <div class="waitlist-progress" aria-live="polite"><div class="waitlist-progress-head"><span id="waitlist-progress-label">Etapa 1 de 3</span><span id="waitlist-progress-percent">33%</span></div><div class="waitlist-progress-track"><span id="waitlist-progress-bar"></span></div></div>
+          <fieldset class="waitlist-step is-active" data-step="1"><legend>Conta pra gente quem é você.</legend><div class="waitlist-fields"><label>Seu nome<input name="entry.473968100" type="text" autocomplete="name" required></label><label>Seu e-mail<input name="entry.148005583" type="email" autocomplete="email" placeholder="voce@email.com" required></label></div><button class="button button-light waitlist-next" type="button">Continuar <span aria-hidden="true">→</span></button></fieldset>
+          <fieldset class="waitlist-step" data-step="2" hidden><legend>Onde a gente encontra você?</legend><div class="waitlist-fields waitlist-fields-location"><label>WhatsApp<input name="entry.996635909" id="waitlist-phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(00) 00000-0000" maxlength="15" required></label><label>UF<select id="waitlist-state" required><option value="">Escolha seu estado</option></select></label><label class="waitlist-city-field">Cidade<select name="entry.832403091" id="waitlist-city" disabled required><option value="">Selecione a UF primeiro</option></select></label></div><div class="waitlist-actions"><button class="button button-ghost waitlist-back" type="button">Voltar</button><button class="button button-light waitlist-next" type="button">Continuar <span aria-hidden="true">→</span></button></div></fieldset>
+          <fieldset class="waitlist-step" data-step="3" hidden><legend>Mais um pouquinho sobre você.</legend><div class="waitlist-fields"><label>Como ficou sabendo do Dajogo?<select name="entry.1759593666" required><option value="">Escolha uma opção</option><option>Busca (google, IAs, etc)</option><option>Anúncios</option><option>Instagram</option><option>TikTok</option><option>Indicação (Amigos, familiares, conhecidos, etc)</option></select></label><label>Quantas vezes você pratica esporte por semana?<select name="entry.78172723" required><option value="">Escolha uma opção</option><option>Não pratico ainda</option><option>Menos de 1 vez por semana</option><option>1 vez por semana</option><option>2 vezes por semana</option><option>+ de 2 vezes por semana</option></select></label></div><div class="waitlist-actions"><button class="button button-ghost waitlist-back" type="button">Voltar</button><button class="button button-light" type="submit">Entrar na lista <span aria-hidden="true">↗</span></button></div></fieldset>
+          <p class="waitlist-feedback" id="waitlist-feedback" role="status" aria-live="polite"></p>
+          <p class="waitlist-privacy">Seus dados ficam somente na lista de espera da Dajogo.</p>
+          <div class="waitlist-success" id="waitlist-success" role="status" aria-live="polite" hidden>
+            <p class="waitlist-success-kicker">Inscrição recebida</p>
+            <p>Boa! Você já está na lista. E aqui fica uma dica: avise seus amigos para entrarem na lista também! Quanto mais pessoas perto de você estiverem na lista mais rápido o Dajogo chega aí! Em breve entraremos em contato!</p>
+            <p class="waitlist-success-signoff">- Equipe Dajogo</p>
+          </div>
+        </form>
+        <iframe name="waitlist-submit-frame" class="waitlist-submit-frame" title="Envio da lista de espera"></iframe>
       </div>
     </section>
   </main>
